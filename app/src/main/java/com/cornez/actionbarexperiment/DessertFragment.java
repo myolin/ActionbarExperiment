@@ -7,9 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-public class LunchFragment extends Fragment {
+public class DessertFragment extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        return inflater.inflate(R.layout.fragment_lunch,container,false);
+        return inflater.inflate(R.layout.fragment_dessert,container,false);
     }
 }
