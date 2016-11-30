@@ -16,11 +16,11 @@ import android.widget.TextView;
 public class AppetizerFragment extends Fragment {
 
     private static final String PREF_APPETIZER = "appetizer_key";
-    private static final String PRICE_TAG = "price_key";
+    private static final String APPETIZER_PRICE_TAG = "appetizer_price_key";
     private static final String ONION_RINGS = "3.99";
     private static final String EGG_ROLL = "2.99";
     private static final String BBQ_WINGS = "4.99";
-    private static final String APPETIZER_NAME = "name_key";
+    private static final String APPETIZER_NAME = "appetizer_name_key";
     private RadioGroup radioGroup;
     private SharedPreferences preferences;
 
@@ -49,15 +49,15 @@ public class AppetizerFragment extends Fragment {
             int index = radioGroup.indexOfChild(getView().findViewById(id));
             switch (index){
                 case 0:
-                    editor.putString(PRICE_TAG, ONION_RINGS);
+                    editor.putString(APPETIZER_PRICE_TAG, ONION_RINGS);
                     editor.putString(APPETIZER_NAME,"ONION RINGS");
                     break;
                 case 1:
-                    editor.putString(PRICE_TAG, EGG_ROLL);
+                    editor.putString(APPETIZER_PRICE_TAG, EGG_ROLL);
                     editor.putString(APPETIZER_NAME,"CHINESE EGG ROLLS");
                     break;
                 case 2:
-                    editor.putString(PRICE_TAG, BBQ_WINGS);
+                    editor.putString(APPETIZER_PRICE_TAG, BBQ_WINGS);
                     editor.putString(APPETIZER_NAME,"HONEY BBQ WINGS");
                     break;
             }

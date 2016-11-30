@@ -4,17 +4,17 @@
     <string name="ui_tabname_entree">Entrée</string>
     <string name="ui_tabname_dessert">Dessert</string>
     <string name="ui_tabname_checkout">Check-out</string>
-    <string name="appetizer_1">Onion Rings</string>
-    <string name="appetizer_2">Chinese Egg Rolls</string>
-    <string name="appetizer_3">Honey BBQ Wings</string>
-    <string name="dessert_1">Chocolate Cake</string>
-    <string name="dessert_2">Apple Pie</string>
-    <string name="dessert_3">Root Beer Float</string>
-    <string name="entree_1">Bourbon Chicken Skillet</string>
-    <string name="entree_2">T-Bone Steak</string>
-    <string name="entree_3">Spaghetti and Meatballs</string>
+    <string name="appetizer_1">Onion Rings ($3.99)</string>
+    <string name="appetizer_2">Chinese Egg Rolls ($2.99)</string>
+    <string name="appetizer_3">Honey BBQ Wings ($4.99)</string>
+    <string name="dessert_1">Chocolate Cake ($2.99)</string>
+    <string name="dessert_2">Apple Pie ($3.99)</string>
+    <string name="dessert_3">Root Beer Float ($3.99)</string>
+    <string name="entree_1">Bourbon Chicken Skillet ($11.99)</string>
+    <string name="entree_2">T-Bone Steak ($13.99)</string>
+    <string name="entree_3">Spaghetti and Meatballs ($10.99)</string>
     <string name="ui_tabname_dummy">Dummy</string>
-    <string name="zero">0.00</string>
+    <string name="zero">$0.00</string>
     <string name="blank"> </string>
     <string name="total_cost">Total:</string>
 </resources>

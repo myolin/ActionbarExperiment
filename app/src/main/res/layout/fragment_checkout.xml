@@ -8,8 +8,9 @@
     <!-- TODO: Update blank fragment layout -->
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white">
 
         <TextView
             android:text="@string/ui_tabname_appetizer"
@@ -53,8 +54,9 @@
             android:text="@string/blank"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/textView4"
-            android:layout_toEndOf="@+id/textView2"
+            android:layout_alignBottom="@+id/textView4"
+            android:layout_toEndOf="@+id/textView4"
+            android:layout_marginLeft="40dp"
             android:id="@+id/textView5" />
 
         <TextView
@@ -91,6 +93,16 @@
             android:id="@+id/textView10" />
 
         <TextView
+            android:text="@string/total_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView10"
+            android:layout_toStartOf="@+id/textView10"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="37dp"
+            android:id="@+id/textView11" />
+
+        <TextView
             android:text="@string/zero"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -99,13 +111,13 @@
             android:id="@+id/textView12" />
 
         <TextView
-            android:text="@string/total_cost"
+            android:text="@string/blank"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="49dp"
-            android:id="@+id/textView11"
-            android:layout_marginBottom="46dp"
             android:layout_alignParentBottom="true"
-            android:layout_toStartOf="@+id/textView12" />
+            android:layout_alignStart="@+id/textView11"
+            android:layout_marginBottom="13dp"
+            android:id="@+id/textView13" />
+
     </RelativeLayout>
 </FrameLayout>

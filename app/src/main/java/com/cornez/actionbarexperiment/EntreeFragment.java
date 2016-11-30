@@ -14,6 +14,11 @@ import android.widget.RadioGroup;
 public class EntreeFragment extends Fragment {
 
     private static final String PREF_ENTREE = "entree_key";
+    private static final String ENTREE_PRICE_TAG = "entree_price_key";
+    private static final String BOURBON_CHICKEN = "11.99";
+    private static final String STEAK = "13.99";
+    private static final String SPAGHETTI = "10.99";
+    private static final String ENTREE_NAME = "entree_name_key";
     private RadioGroup radioGroup;
     private SharedPreferences preferences;
 
@@ -39,8 +44,22 @@ public class EntreeFragment extends Fragment {
             int id = radioGroup.getCheckedRadioButtonId();
             SharedPreferences.Editor editor = preferences.edit();
             editor.putInt(PREF_ENTREE, id);
+            int index = radioGroup.indexOfChild(getView().findViewById(id));
+            switch (index){
+                case 0:
+                    editor.putString(ENTREE_PRICE_TAG, BOURBON_CHICKEN);
+                    editor.putString(ENTREE_NAME,"BOURBON CHICKEN SKILLET");
+                    break;
+                case 1:
+                    editor.putString(ENTREE_PRICE_TAG, STEAK);
+                    editor.putString(ENTREE_NAME,"T-BONE STEAK");
+                    break;
+                case 2:
+                    editor.putString(ENTREE_PRICE_TAG, SPAGHETTI);
+                    editor.putString(ENTREE_NAME,"SPAGHETTI AND MEATBALLS");
+                    break;
+            }
             editor.commit();
-            //int index = radioGroup.indexOfChild(getView().findViewById(id));
         }
     };
 }

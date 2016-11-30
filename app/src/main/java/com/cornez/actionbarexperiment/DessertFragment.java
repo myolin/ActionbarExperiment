@@ -14,6 +14,11 @@ import android.widget.RadioGroup;
 public class DessertFragment extends Fragment {
 
     private static final String PREF_DESSERT = "dessert_key";
+    private static final String DESSERT_PRICE_TAG = "dessert_price_key";
+    private static final String CHOCOLATE_CAKE = "2.99";
+    private static final String APPLE_PIE = "3.99";
+    private static final String ROOT_BEER = "3.99";
+    private static final String DESSERT_NAME = "dessert_name_key";
     private RadioGroup radioGroup;
     private SharedPreferences preferences;
 
@@ -39,8 +44,22 @@ public class DessertFragment extends Fragment {
             int id = radioGroup.getCheckedRadioButtonId();
             SharedPreferences.Editor editor = preferences.edit();
             editor.putInt(PREF_DESSERT, id);
+            int index = radioGroup.indexOfChild(getView().findViewById(id));
+            switch (index){
+                case 0:
+                    editor.putString(DESSERT_PRICE_TAG, CHOCOLATE_CAKE);
+                    editor.putString(DESSERT_NAME,"CHOCOLATE CAKE");
+                    break;
+                case 1:
+                    editor.putString(DESSERT_PRICE_TAG, APPLE_PIE);
+                    editor.putString(DESSERT_NAME,"APPLE PIE");
+                    break;
+                case 2:
+                    editor.putString(DESSERT_PRICE_TAG, ROOT_BEER);
+                    editor.putString(DESSERT_NAME,"ROOT BEER FLOAT");
+                    break;
+            }
             editor.commit();
-            //int index = radioGroup.indexOfChild(getView().findViewById(id));
         }
     };
 }
